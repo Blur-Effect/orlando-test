@@ -1,0 +1,32 @@
+/* src/components/Testimonials.css */
+
+.testimonial-card {
+  background-color: #ffffff; /* Fondo blanco para las tarjetas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para tarjetas */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para efectos */
+}
+
+.testimonial-card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño al pasar el cursor */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el cursor */
+}
+
+.testimonial-image {
+  width: 100px; /* Tamaño fijo para la imagen */
+  height: 100px; /* Tamaño fijo para la imagen */
+  border-radius: 50%; /* Imagen circular */
+  object-fit: cover; /* Mantiene la proporción de la imagen */
+  border: 3px solid #0F4C75; /* Borde alrededor de la imagen */
+}
+
+.testimonial-card h4 {
+  margin-top: 1rem; /* Espacio arriba del nombre */
+  margin-bottom: 0.5rem; /* Espacio debajo del nombre */
+  color: #333333; /* Color del nombre */
+}
+
+.testimonial-card p {
+  margin: 0; /* Quitar márgenes del párrafo */
+  color: #666666; /* Color del comentario */
+  font-style: italic; /* Estilo de cursiva para el comentario */
+}
