@@ -24,4 +24,18 @@
     font-size: 1.25rem;
     padding: 0.75rem 2rem;
   }
-  
+  /* src/components/Header.css */
+
+.cta-button {
+  font-size: 1.25rem;
+  padding: 0.75rem 2rem;
+  background-color: #FF5733; /* Color llamativo (naranja) */
+  border: none;
+  color: white;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #FF6F61; /* Cambio de color al pasar el cursor */
+  transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+}

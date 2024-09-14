@@ -24,7 +24,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section className="py-5 bg-light">
+    <section id="contact-section" className="py-5 bg-light"> {/* Agregamos el id aquí */}
       <div className="container">
         <h2 className="text-center mb-4">Contacto</h2>
         <div className="row">
