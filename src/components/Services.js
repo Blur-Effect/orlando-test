@@ -1,6 +1,6 @@
 // src/components/Services.js
 import React from 'react';
-import { FaWater, FaHammer, FaHome, FaRecycle } from 'react-icons/fa'; // Puedes usar cualquier otra biblioteca de íconos o imágenes
+import { FaWater, FaHammer, FaHome, FaRecycle } from 'react-icons/fa'; 
 import './Services.css';
 
 const services = [

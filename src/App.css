@@ -14,7 +14,7 @@
 }
 
 .App-header {
-  background-color: #00BFFF; /* Color azul claro similar al agua de piscina */
+  background-color: #00BFFF; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;

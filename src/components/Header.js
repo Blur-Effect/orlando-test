@@ -1,7 +1,7 @@
 // src/components/Header.js
 import React from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import './Header.css'; // Asegúrate de que este CSS esté bien configurado
+import './Header.css'; 
 
 const Header = () => {
   const scrollToContact = () => {

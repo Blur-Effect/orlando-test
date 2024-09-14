@@ -1,30 +1,30 @@
 import React from 'react';
 import photo from '../assets/photo';
-import './Testimonials.css'; // Asegúrate de crear este archivo CSS
+import './Testimonials.css'; 
 
 const testimonials = [
   {
     id: 1,
     name: 'Juan Pérez',
-    image: photo.testimonial1, // Asegúrate de que coincida con las claves en photo.js
+    image: photo.testimonial1, 
     comment: 'Excelente trabajo en la construcción de nuestra piscina. Muy profesionales y atentos a los detalles.',
   },
   {
     id: 2,
     name: 'María López',
-    image: photo.testimonial2, // Asegúrate de que coincida con las claves en photo.js
+    image: photo.testimonial2, 
     comment: 'Nos ayudaron con el diseño personalizado y el resultado superó nuestras expectativas. Altamente recomendados.',
   },
   {
     id: 3,
     name: 'Carlos Rodríguez',
-    image: photo.testimonial3, // Asegúrate de que coincida con las claves en photo.js
+    image: photo.testimonial3, 
     comment: 'La remodelación de nuestra piscina fue impecable. El equipo fue puntual y el trabajo de calidad.',
   },
   {
     id: 4,
     name: 'Ana Gómez',
-    image: photo.testimonial4, // Asegúrate de que coincida con las claves en photo.js
+    image: photo.testimonial4,
     comment: 'El mantenimiento de nuestra piscina ha sido excelente. Siempre están disponibles para resolver cualquier problema.',
   },
 ];

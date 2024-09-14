@@ -19,12 +19,11 @@ const ContactForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí podrías agregar lógica para enviar el formulario, por ejemplo, a un servicio backend.
     console.log('Form data submitted:', formData);
   };
 
   return (
-    <section id="contact-section" className="py-5 bg-light"> {/* Agregamos el id aquí */}
+    <section id="contact-section" className="py-5 bg-light">
       <div className="container">
         <h2 className="text-center mb-4">Contacto</h2>
         <div className="row">

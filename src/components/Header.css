@@ -2,7 +2,7 @@
 /* src/components/Header.css */
 
 .header-section {
-    background-image: url('../assets/images/pexels8.jpg'); /* Ruta de la imagen de fondo */
+    background-image: url('../assets/images/pexels8.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -24,18 +24,17 @@
     font-size: 1.25rem;
     padding: 0.75rem 2rem;
   }
-  /* src/components/Header.css */
-
+ 
 .cta-button {
   font-size: 1.25rem;
   padding: 0.75rem 2rem;
-  background-color: #FF5733; /* Color llamativo (naranja) */
+  background-color: #FF5733; 
   border: none;
   color: white;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #FF6F61; /* Cambio de color al pasar el cursor */
-  transform: scale(1.05); /* Aumenta el tamaño ligeramente */
+  background-color: #FF6F61; 
+  transform: scale(1.05); 
 }

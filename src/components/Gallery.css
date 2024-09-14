@@ -21,10 +21,10 @@
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
-  transition: transform 0.2s ease; /* Duración reducida */
-  will-change: transform; /* Mejorar el rendimiento */
+  transition: transform 0.2s ease; 
+  will-change: transform; 
 }
 
 .img-container:hover .gallery-image {
-  transform: scale(1.05); /* Efecto de zoom menor */
+  transform: scale(1.05); 
 }
