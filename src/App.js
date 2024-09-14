@@ -7,7 +7,6 @@ import ContactForm from "./components/ContactForm";
 import "./index.css";
 
 function App() {
-  // Función para hacer scroll al header
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,

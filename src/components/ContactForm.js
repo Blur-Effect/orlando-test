@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./ContactForm.css"; // Asegúrate de crear este archivo CSS
+import "./ContactForm.css";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -8,15 +8,13 @@ const ContactForm = () => {
     message: "",
   });
   const [successMessage, setSuccessMessage] = useState(false);
-  const [errors, setErrors] = useState({}); // Estado para manejar errores
+  const [errors, setErrors] = useState({});
 
-  // Función para validar el correo electrónico
   const validateEmail = (email) => {
     const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailPattern.test(email);
   };
 
-  // Función para validar el nombre (solo letras y espacios)
   const validateName = (name) => {
     const namePattern = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
     return namePattern.test(name);
@@ -33,7 +31,6 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validaciones
     let formErrors = {};
     if (!validateName(formData.name)) {
       formErrors.name = "El nombre solo puede contener letras y espacios.";
@@ -47,11 +44,9 @@ const ContactForm = () => {
       return;
     }
 
-    // Limpiar los errores y enviar el formulario
     setErrors({});
     console.log("Form data submitted:", formData);
 
-    // Limpiar los campos y mostrar el mensaje de éxito
     setFormData({
       name: "",
       email: "",
@@ -59,7 +54,6 @@ const ContactForm = () => {
     });
     setSuccessMessage(true);
 
-    // Ocultar el mensaje después de 3 segundos
     setTimeout(() => {
       setSuccessMessage(false);
     }, 3000);

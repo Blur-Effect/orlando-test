@@ -1,40 +1,37 @@
-
-/* src/components/Header.css */
-
 .header-section {
-    background-image: url('../assets/images/pexels8.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 4rem 0;
-  }
-  
-  .header-title {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .header-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
-  }
-  
-  .cta-button {
-    font-size: 1.25rem;
-    padding: 0.75rem 2rem;
-  }
- 
+  background-image: url("../assets/images/pexels8.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.header-subtitle {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+}
+
 .cta-button {
   font-size: 1.25rem;
   padding: 0.75rem 2rem;
-  background-color: #FF5733; 
+}
+
+.cta-button {
+  font-size: 1.25rem;
+  padding: 0.75rem 2rem;
+  background-color: #ff5733;
   border: none;
   color: white;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #FF6F61; 
-  transform: scale(1.05); 
+  background-color: #ff6f61;
+  transform: scale(1.05);
 }

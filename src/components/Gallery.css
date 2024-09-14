@@ -1,5 +1,3 @@
-/* src/components/Gallery.css */
-
 .gallery-section {
   padding: 20px;
 }
@@ -21,10 +19,10 @@
   height: 200px;
   object-fit: cover;
   border-radius: 8px;
-  transition: transform 0.2s ease; 
-  will-change: transform; 
+  transition: transform 0.2s ease;
+  will-change: transform;
 }
 
 .img-container:hover .gallery-image {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }

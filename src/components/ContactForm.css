@@ -1,27 +1,24 @@
-/* src/components/ContactForm.css */
-
 .contact-form {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-form .form-group {
-    margin-bottom: 1.5rem;
-  }
-  
-  .contact-form .form-control {
-    border-radius: 4px;
-  }
-  
-  .contact-form .btn-primary {
-    background-color: #0F4C75;
-    border-color: #0F4C75;
-  }
-  
-  .contact-form .btn-primary:hover {
-    background-color: #0d3f61;
-    border-color: #0d3f61;
-  }
-  
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-form .form-control {
+  border-radius: 4px;
+}
+
+.contact-form .btn-primary {
+  background-color: #0f4c75;
+  border-color: #0f4c75;
+}
+
+.contact-form .btn-primary:hover {
+  background-color: #0d3f61;
+  border-color: #0d3f61;
+}
