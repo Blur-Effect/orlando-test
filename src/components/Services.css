@@ -34,28 +34,3 @@
   color: #666666;
   text-align: center;
 }
-
-.py-5 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.bg-light {
-  background-color: #f8f9fa;
-}
-
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-}
-
-.col-md-6 {
-  flex: 1 1 calc(50% - 1.5rem);
-  max-width: calc(50% - 1.5rem);
-}
-
-.col-lg-3 {
-  flex: 1 1 calc(25% - 1.5rem);
-  max-width: calc(25% - 1.5rem);
-}
