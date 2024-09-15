@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
+import { Fade } from "react-awesome-reveal";
 import "./ContactForm.css";
 
 const ContactForm = () => {
@@ -11,13 +13,14 @@ const ContactForm = () => {
   const [errors, setErrors] = useState({});
 
   const validateEmail = (email) => {
-    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    // Simplified email validation
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailPattern.test(email);
   };
 
   const validateName = (name) => {
     const namePattern = /^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$/;
-    return namePattern.test(name);
+    return name.trim() !== "" && namePattern.test(name);
   };
 
   const handleChange = (e) => {
@@ -25,6 +28,11 @@ const ContactForm = () => {
     setFormData({
       ...formData,
       [name]: value,
+    });
+    // Clear errors as user types
+    setErrors({
+      ...errors,
+      [name]: "",
     });
   };
 
@@ -47,80 +55,86 @@ const ContactForm = () => {
     setErrors({});
     console.log("Form data submitted:", formData);
 
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
-    setSuccessMessage(true);
-
+    // Simulate form submission
     setTimeout(() => {
-      setSuccessMessage(false);
-    }, 3000);
+      setSuccessMessage(true);
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+
+      setTimeout(() => {
+        setSuccessMessage(false);
+      }, 5000);
+    }, 1000);
   };
 
   return (
-    <section id="contact-section" className="py-5 bg-light">
-      <div className="container">
-        <h2 className="text-center mb-4">Contacto</h2>
-        {successMessage && (
-          <div className="alert alert-success text-center" role="alert">
-            ¡Formulario enviado con éxito!
-          </div>
-        )}
-        <div className="row">
-          <div className="col-md-8 offset-md-2">
-            <form onSubmit={handleSubmit} className="contact-form">
-              <div className="form-group">
-                <label htmlFor="name">Nombre</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  className={`form-control ${errors.name ? "is-invalid" : ""}`}
-                  required
-                />
-                {errors.name && (
-                  <div className="invalid-feedback">{errors.name}</div>
-                )}
-              </div>
-              <div className="form-group">
-                <label htmlFor="email">Correo Electrónico</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  className={`form-control ${errors.email ? "is-invalid" : ""}`}
-                  required
-                />
-                {errors.email && (
-                  <div className="invalid-feedback">{errors.email}</div>
-                )}
-              </div>
-              <div className="form-group">
-                <label htmlFor="message">Mensaje</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="form-control"
-                  rows="4"
-                  required
-                />
-              </div>
-              <button type="submit" className="btn btn-primary">
-                Enviar
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
+      <section id="contact-section" className="contact-section py-5">
+        <Container>
+          <Fade direction="up" triggerOnce>
+            <h2 className="text-center mb-5">Contacto</h2>
+            {successMessage && (
+                <Alert variant="success" className="text-center">
+                  ¡Formulario enviado con éxito!
+                </Alert>
+            )}
+            <Row className="justify-content-center">
+              <Col md={8}>
+                <Form onSubmit={handleSubmit} className="contact-form p-4">
+                  <Form.Group controlId="name" className="mb-4">
+                    <Form.Label>Nombre</Form.Label>
+                    <Form.Control
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        isInvalid={!!errors.name}
+                        placeholder="Ingresa tu nombre"
+                    />
+                    <Form.Control.Feedback type="invalid">
+                      {errors.name}
+                    </Form.Control.Feedback>
+                  </Form.Group>
+
+                  <Form.Group controlId="email" className="mb-4">
+                    <Form.Label>Correo Electrónico</Form.Label>
+                    <Form.Control
+                        type="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        isInvalid={!!errors.email}
+                        placeholder="Ingresa tu correo electrónico"
+                    />
+                    <Form.Control.Feedback type="invalid">
+                      {errors.email}
+                    </Form.Control.Feedback>
+                  </Form.Group>
+
+                  <Form.Group controlId="message" className="mb-4">
+                    <Form.Label>Mensaje</Form.Label>
+                    <Form.Control
+                        as="textarea"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        rows={5}
+                        placeholder="Escribe tu mensaje"
+                        required
+                    />
+                  </Form.Group>
+
+                  <Button variant="primary" type="submit" className="w-100">
+                    Enviar Mensaje
+                  </Button>
+                </Form>
+              </Col>
+            </Row>
+          </Fade>
+        </Container>
+      </section>
   );
 };
 

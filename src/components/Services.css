@@ -1,34 +1,65 @@
+.services-section {
+  background-color: #f0f8ff; /* Light blue background to reflect the pool theme */
+}
+
 .service-card {
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  border-radius: 15px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
+  justify-content: flex-start;
+  flex-grow: 1;
+  height: 360px;
+}
+
+.service-description {
+  margin-top: auto; /* Pushes the description to the bottom if needed */
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  top: -75%;
+  left: -75%;
+  width: 200%;
+  height: 200%;
+  background-color: rgba(0, 123, 255, 0.1);
+  transform: rotate(45deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.service-card:hover::before {
+  top: -50%;
+  left: -50%;
 }
 
 .service-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
 }
 
 .service-icon {
-  color: #0f4c75;
-  margin-bottom: 1rem;
+  color: #007bff;
+  font-size: 4rem;
+  transition: color 0.3s ease;
 }
 
-.service-card h4 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  color: #333333;
-  font-size: 1.25rem;
+.service-card:hover .service-icon {
+  color: #0056b3;
 }
 
-.service-card p {
-  margin: 0;
-  color: #666666;
-  text-align: center;
+.service-title {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .service-card {
+    margin-bottom: 20px;
+  }
 }

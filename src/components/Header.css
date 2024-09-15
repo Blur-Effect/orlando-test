@@ -1,37 +1,47 @@
 .header-section {
-  background-image: url("../assets/images/pexels8.jpg");
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  height: 100vh;
   background-size: cover;
   background-position: center;
-  color: white;
-  text-align: center;
-  padding: 4rem 0;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .header-title {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px #000;
 }
 
 .header-subtitle {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
+  color: #eee;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px #000;
 }
 
 .cta-button {
-  font-size: 1.25rem;
-  padding: 0.75rem 2rem;
+  font-size: 1.2rem;
+  padding: 10px 30px;
 }
 
-.cta-button {
-  font-size: 1.25rem;
-  padding: 0.75rem 2rem;
-  background-color: #ff5733;
-  border: none;
-  color: white;
-  transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #ff6f61;
-  transform: scale(1.05);
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2.5rem;
+  }
+  .header-subtitle {
+    font-size: 1.2rem;
+  }
 }

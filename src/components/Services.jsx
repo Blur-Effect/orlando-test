@@ -1,56 +1,64 @@
 import React from "react";
+import { Container, Row, Col } from "react-bootstrap";
 import { FaWater, FaHammer, FaHome, FaRecycle } from "react-icons/fa";
+import { Fade } from "react-awesome-reveal";
 import "./Services.css";
 
 const services = [
   {
     id: 1,
-    icon: <FaWater size={40} />,
+    icon: <FaWater size={50} />,
     title: "Diseño Personalizado",
     description:
-      "Creamos diseños únicos y personalizados para tu piscina, adaptándonos a tus gustos y necesidades.",
+        "Creamos diseños únicos y personalizados para tu piscina, adaptándonos a tus gustos y necesidades.",
   },
   {
     id: 2,
-    icon: <FaHammer size={40} />,
+    icon: <FaHammer size={50} />,
     title: "Construcción de Piscinas",
     description:
-      "Ofrecemos servicios completos de construcción de piscinas, desde la planificación hasta la ejecución.",
+        "Ofrecemos servicios completos de construcción de piscinas, desde la planificación hasta la ejecución.",
   },
   {
     id: 3,
-    icon: <FaHome size={40} />,
+    icon: <FaHome size={50} />,
     title: "Remodelación",
     description:
-      "Renovamos y remodelamos piscinas existentes para mejorar su apariencia y funcionalidad.",
+        "Renovamos y remodelamos piscinas existentes para mejorar su apariencia y funcionalidad.",
   },
   {
     id: 4,
-    icon: <FaRecycle size={40} />,
+    icon: <FaRecycle size={50} />,
     title: "Mantenimiento",
     description:
-      "Proporcionamos servicios de mantenimiento regular para asegurar que tu piscina se mantenga en óptimas condiciones.",
+        "Proporcionamos servicios de mantenimiento regular para asegurar que tu piscina se mantenga en óptimas condiciones.",
   },
 ];
 
 const Services = () => {
   return (
-    <section className="py-5 bg-light">
-      <div className="container">
-        <h2 className="text-center mb-4">Nuestros Servicios</h2>
-        <div className="row">
-          {services.map((service) => (
-            <div key={service.id} className="col-md-6 col-lg-3 mb-4">
-              <div className="service-card text-center p-4 border rounded">
-                <div className="service-icon mb-3">{service.icon}</div>
-                <h4>{service.title}</h4>
-                <p>{service.description}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+      <section className="services-section py-5">
+        <Container>
+          <Fade direction="up" triggerOnce>
+            <h2 className="text-center mb-5">Nuestros Servicios</h2>
+            <Row>
+              {services.map((service, index) => (
+                  <Col key={service.id} md={6} lg={3} className="mb-4">
+                    <Fade direction="up" delay={index * 100} triggerOnce>
+                      <div className="service-card text-center p-4">
+                        <div className="service-icon mb-3" aria-hidden="true">
+                          {service.icon}
+                        </div>
+                        <h4 className="service-title mb-3">{service.title}</h4>
+                        <p className="service-description">{service.description}</p>
+                      </div>
+                    </Fade>
+                  </Col>
+              ))}
+            </Row>
+          </Fade>
+        </Container>
+      </section>
   );
 };
 
